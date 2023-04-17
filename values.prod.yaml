@@ -82,6 +82,6 @@ tolerations: []
 
 
 env:
-  prd1
+  prd1asas
 
   
