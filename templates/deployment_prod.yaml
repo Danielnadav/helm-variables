@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "hellworld.fullname" . }}
+  env:  {{ .Values.env }}
   labels:
     {{- include "hellworld.labels" . | nindent 4 }}
 spec:
@@ -60,5 +61,6 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
 env:
-  {{ .Values.env}}
+  {{ .Values.env }}
+
 
